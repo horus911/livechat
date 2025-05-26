@@ -8,7 +8,46 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- Ajoutez ces scripts juste avant la balise </body> -->
+
+<!-- Le SDK Firebase principal -->
+<script src="https://www.gstatic.com/firebasejs/VERSION/firebase-app.js"></script>
+
+<!-- Ajoutez les SDK des services Firebase que vous utilisez -->
+<script src="https://www.gstatic.com/firebasejs/VERSION/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/VERSION/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/VERSION/firebase-database.js"></script>
+
+<!-- TODO: Ajoutez et configurez votre application Firebase -->
+<script>
+  // Votre configuration Firebase ici
+  const firebaseConfig = {
+    apiKey: "VOTRE_CLE_API",
+    authDomain: "livechat-83d0a.firebaseapp.com",
+    projectId: "livechat-83d0a",
+    storageBucket: "livechat-83d0a.appspot.com", // Si vous utilisez Cloud Storage
+    messagingSenderId: "VOTRE_SENDER_ID", // Si vous utilisez FCM
+    appId: "VOTRE_APP_ID",
+    databaseURL: "https://livechat-83d0a-default-rtdb.firebaseio.com" // Si vous utilisez Realtime Database (vous l'utilisez!)
+  };
+
+  // Initialisez Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Maintenant, vous pouvez utiliser les services Firebase, par exemple :
+  // const auth = firebase.auth();
+  // const db = firebase.firestore();
+  // const rtdb = firebase.database();
+
+</script>
+
+<!-- Ajoutez vos propres scripts JS en dessous -->
+<script src="/script.js"></script>
+
+</body>
+</html>
+
+  <body>
   <div class="container">
     <h1>Mini WhatsApp</h1>
     <button onclick="login()">Se connecter avec Google</button>
